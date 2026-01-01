@@ -452,4 +452,28 @@ const firebaseConfig = {
     }
   </script>
 </body>
+<body>
+  <button id="testBtn">測試 Firebase</button>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBkie6n3skpcGmnbp31DpNsmZTPWBVYtQ",
+      authDomain: "borrow-site.firebaseapp.com",
+      projectId: "borrow-site",
+      storageBucket: "borrow-site.appspot.com",
+      messagingSenderId: "1108024130860",
+      appId: "1:1108024130860:web:37f1237df9015c19259089"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    document.getElementById("testBtn").addEventListener("click", () => {
+      alert("Firebase 已成功初始化！");
+    });
+  </script>
+</body>
 </html>
