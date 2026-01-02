@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>Borrow Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Firebase 登入測試</title>
 </head>
 <body>
-  <h1>借用系統</h1>
 
-  <div class="form">
-    <input type="email" id="email" placeholder="輸入 Email">
-    <input type="password" id="password" placeholder="輸入密碼">
-    <button id="registerBtn">註冊</button>
-    <button id="loginBtn">登入</button>
-  </div>
+  <h2>Firebase 登入 / 註冊</h2>
 
-  <div id="status"></div>
+  <input id="email" type="email" placeholder="Email"><br><br>
+  <input id="password" type="password" placeholder="Password"><br><br>
 
-  <!-- Firebase SDK -->
-  <script type="module" src="app.js"></script>
+  <button id="registerBtn">註冊</button>
+  <button id="loginBtn">登入</button>
+
+  <p id="status"></p>
+
+  <!-- 只載入一次 JS，type=module 很重要 -->
+  <script type="module" src="./firebase.js"></script>
 </body>
 </html>
