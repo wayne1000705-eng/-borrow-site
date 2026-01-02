@@ -7,6 +7,7 @@ import {
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 // 正確的 firebaseConfig (來自 Firebase Console)
+
 const firebaseConfig = {
   apiKey: "AIzaSyBkie6n3skpcGmnbp31DpNsmZTPWBVYtQ",
   authDomain: "borrow-site.firebaseapp.com",
@@ -54,3 +55,26 @@ onAuthStateChanged(auth, (user) => {
     console.log("目前沒有使用者登入");
   }
 });
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBKie6n3skpcGmnbp31DpNsmZTPWBYVQtQ",
+    authDomain: "borrow-site.firebaseapp.com",
+    projectId: "borrow-site",
+    storageBucket: "borrow-site.firebasestorage.app",
+    messagingSenderId: "108024130860",
+    appId: "1:108024130860:web:37f1237df9015c19259089",
+    measurementId: "G-VD69LS4R48"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
